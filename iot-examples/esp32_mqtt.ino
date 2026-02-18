@@ -1,5 +1,6 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
+#include <ArduinoJson.h>
 
 // Update these with your network details
 const char* ssid = "YOUR_WIFI_SSID";
@@ -50,25 +51,19 @@ void callback(char* topic, byte* message, unsigned int length) {
   }
   Serial.println();
 
-  if (String(topic) == "iot/status/led") {
-    Serial.print("Changing output to ");
-    if(messageTemp == "on"){
-      Serial.println("on");
-      // digitalWrite(ledPin, HIGH);
-    }
-    else if(messageTemp == "off"){
-      Serial.println("off");
-      // digitalWrite(ledPin, LOW);
-    }
+  if (String(topic) == "EQ_RPC/esp32") {
+    Serial.print("Response from server: ");
+    Serial.println(messageTemp);
   }
 }
 
 void reconnect() {
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
-    if (client.connect("ESP32Client")) {
+    // Attempt to connect with username and password
+    if (client.connect("ESP32Client", "admin", "password")) {
       Serial.println("connected");
-      client.subscribe("iot/status/#");
+      client.subscribe("EQ_RPC/esp32");
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
@@ -90,9 +85,16 @@ void loop() {
     
     // Example: Reading a sensor value
     value++;
-    snprintf (msg, 50, "hello world #%ld", value);
+    StaticJsonDocument<200> doc;
+    doc["uuid"] = "esp32";
+    doc["value"] = value;
+    doc["status"] = "active";
+    
+    char buffer[256];
+    serializeJson(doc, buffer);
+    
     Serial.print("Publish message: ");
-    Serial.println(msg);
-    client.publish("iot/sensors/test", msg);
+    Serial.println(buffer);
+    client.publish("iot/sensors/esp32", buffer);
   }
 }

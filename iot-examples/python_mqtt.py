@@ -4,9 +4,11 @@ import json
 
 # MQTT Broker Settings
 BROKER = "localhost" 
-PORT = 1884
+PORT = 1883
 TOPIC_PUB = "iot/sensors/python_client"
-TOPIC_SUB = "iot/status/#"
+TOPIC_SUB = "EQ_RPC/python_client"
+USERNAME = "admin"
+PASSWORD = "password"
 
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
@@ -20,6 +22,7 @@ def on_message(client, userdata, msg):
 
 def main():
     client = mqtt.Client()
+    client.username_pw_set(USERNAME, PASSWORD)
     client.on_connect = on_connect
     client.on_message = on_message
 
@@ -33,7 +36,12 @@ def main():
 
     try:
         while True:
-            payload = json.dumps({"temperature": 25.5, "humidity": 60})
+            payload = json.dumps({
+                "uuid": "python_client",
+                "temperature": 25.5, 
+                "humidity": 60,
+                "timestamp": time.time()
+            })
             print(f"Publishing: {payload} to {TOPIC_PUB}")
             client.publish(TOPIC_PUB, payload)
             time.sleep(5)
