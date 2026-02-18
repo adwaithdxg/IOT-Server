@@ -1,5 +1,5 @@
 {
-  "name": "express-starter-template",
+  "name": "iot-server",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/server.ts",
