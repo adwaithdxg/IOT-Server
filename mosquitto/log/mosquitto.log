@@ -1,0 +1,76 @@
+1771244486: mosquitto version 2.1.2 starting
+1771244486: Config loaded from /mosquitto/config/mosquitto.conf.
+1771244486: Bridge support available.
+1771244486: Persistence support available.
+1771244486: TLS support available.
+1771244486: TLS-PSK support available.
+1771244486: Websockets support available.
+1771244486: Opening ipv4 listen socket on port 1883.
+1771244486: Opening ipv6 listen socket on port 1883.
+1771244486: Opening ipv4 listen socket on port 9001.
+1771244486: Opening ipv6 listen socket on port 9001.
+1771244486: mosquitto version 2.1.2 running
+1771244519: New connection from 172.20.0.1:53268 on port 9001.
+1771244519: Client 172.20.0.1 [172.20.0.1:53268] disconnected: bad socket read/write: Unknown error
+1771244519: New connection from 172.20.0.1:53270 on port 9001.
+1771244519: Client 172.20.0.1 [172.20.0.1:53270] disconnected: bad socket read/write: Unknown error
+1771244519: New connection from 172.20.0.1:53278 on port 9001.
+1771244519: Client 172.20.0.1 [172.20.0.1:53278] disconnected: bad socket read/write: Unknown error
+1771244519: New connection from 172.20.0.1:53284 on port 9001.
+1771244519: Client 172.20.0.1 [172.20.0.1:53284] disconnected: bad socket read/write: Unknown error
+1771244519: New connection from 172.20.0.1:53300 on port 9001.
+1771244519: Client 172.20.0.1 [172.20.0.1:53300] disconnected: bad socket read/write: Unknown error
+1771244519: New connection from 172.20.0.1:53316 on port 9001.
+1771244519: Client 172.20.0.1 [172.20.0.1:53316] disconnected: bad socket read/write: Unknown error
+1771244519: New connection from 172.20.0.1:53324 on port 9001.
+1771244519: Client 172.20.0.1 [172.20.0.1:53324] disconnected: bad socket read/write: Unknown error
+1771244519: New connection from 172.20.0.1:53340 on port 9001.
+1771244519: Client 172.20.0.1 [172.20.0.1:53340] disconnected: bad socket read/write: Unknown error
+1771244519: New connection from 172.20.0.1:53344 on port 9001.
+1771244519: Client 172.20.0.1 [172.20.0.1:53344] disconnected: bad socket read/write: Unknown error
+1771244519: New connection from 172.20.0.1:53350 on port 9001.
+1771244519: Client 172.20.0.1 [172.20.0.1:53350] disconnected: bad socket read/write: Unknown error
+1771244567: mosquitto version 2.1.2 terminating
+1771244567: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1771244582: mosquitto version 2.1.2 starting
+1771244582: Config loaded from /mosquitto/config/mosquitto.conf.
+1771244582: Bridge support available.
+1771244582: Persistence support available.
+1771244582: TLS support available.
+1771244582: TLS-PSK support available.
+1771244582: Websockets support available.
+1771244582: Opening ipv4 listen socket on port 1883.
+1771244582: Opening ipv6 listen socket on port 1883.
+1771244582: Opening ipv4 listen socket on port 9001.
+1771244582: Opening ipv6 listen socket on port 9001.
+1771244582: mosquitto version 2.1.2 running
+1771244690: mosquitto version 2.1.2 terminating
+1771244690: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1771246125: mosquitto version 2.1.2 starting
+1771246125: Config loaded from /mosquitto/config/mosquitto.conf.
+1771246125: Bridge support available.
+1771246125: Persistence support available.
+1771246125: TLS support available.
+1771246125: TLS-PSK support available.
+1771246125: Websockets support available.
+1771246125: Opening ipv4 listen socket on port 1883.
+1771246125: Opening ipv6 listen socket on port 1883.
+1771246125: Opening ipv4 listen socket on port 9001.
+1771246125: Opening ipv6 listen socket on port 9001.
+1771246125: mosquitto version 2.1.2 running
+1771246136: mosquitto version 2.1.2 terminating
+1771246136: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1771246173: mosquitto version 2.1.2 starting
+1771246173: Config loaded from /mosquitto/config/mosquitto.conf.
+1771246173: Bridge support available.
+1771246173: Persistence support available.
+1771246173: TLS support available.
+1771246173: TLS-PSK support available.
+1771246173: Websockets support available.
+1771246173: Opening ipv4 listen socket on port 1883.
+1771246173: Opening ipv6 listen socket on port 1883.
+1771246173: Opening ipv4 listen socket on port 9001.
+1771246173: Opening ipv6 listen socket on port 9001.
+1771246173: mosquitto version 2.1.2 running
+1771246322: mosquitto version 2.1.2 terminating
+1771246322: Saving in-memory database to /mosquitto/data//mosquitto.db.

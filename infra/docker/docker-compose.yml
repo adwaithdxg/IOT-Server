@@ -1,0 +1,27 @@
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2
+    container_name: mosquitto-broker
+    ports:
+      - "1884:1883" # MQTT
+      - "9002:9001" # WebSockets
+    volumes:
+      - ../../mosquitto/config:/mosquitto/config
+      - ../../mosquitto/data:/mosquitto/data
+      - ../../mosquitto/log:/mosquitto/log
+    restart: unless-stopped
+
+  server:
+    build:
+      context: ../../server
+      dockerfile: Dockerfile
+    container_name: iot-server
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - MQTT_BROKER_URL=mqtt://mosquitto:1883
+    depends_on:
+      - mosquitto
+    restart: unless-stopped
